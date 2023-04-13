@@ -65,7 +65,8 @@ class _AnimationPageState extends State<AnimationPage>
         child: AnimatedBuilder(
           animation: _controller,
           builder: (context, child) => Transform(
-            alignment: Alignment.center, //from where the axis passes
+            //from where the axis passes
+            alignment: Alignment.center,
             transform: Matrix4.identity()
               ..rotateZ(
                 _animation.value,
@@ -74,16 +75,17 @@ class _AnimationPageState extends State<AnimationPage>
               height: 100,
               width: 100,
               decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: const Offset(0, 3),
-                    )
-                  ]),
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: const Offset(0, 3),
+                  )
+                ],
+              ),
             ),
           ),
         ),
